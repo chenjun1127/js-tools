@@ -2,7 +2,7 @@
  * @Author: chenjun
  * @Date:   2018-04-25 13:51:04
  * @Last Modified by:   chenjun
- * @Last Modified time: 2018-04-25 14:07:57
+ * @Last Modified time: 2018-06-28 16:36:19
  */
 
 class Utils {
@@ -76,5 +76,13 @@ class Utils {
                 }
             }
         }
+    }
+
+    static isEmptyObj(obj){
+        var name
+        for(var name in obj){
+            return false;
+        }
+        return true;
     }
 }
