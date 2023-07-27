@@ -1,10 +1,10 @@
 // ...args是一个使用扩展语法（Spread Syntax）的语法，它表示一个参数数组。
-function debounce(fnc, delay) {
+function debounce(func, delay) {
   let timerId;
   return function (...args) {
     clearTimeout(timerId);
     timerId = setTimeout(() => {
-      fnc.apply(this, args);
+      func.apply(this, args);
     }, delay);
   };
 }
